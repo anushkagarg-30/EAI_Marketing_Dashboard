@@ -206,28 +206,68 @@ export default function EAIDashboard() {
 
           <TabsContent value="overview" className="space-y-4" role="tabpanel" id="overview-panel" aria-labelledby="overview-tab">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <LeadFunnelChart data={leadFunnelData} />
-              <RevenueAttributionChart data={revenueAttributionData} />
-              <CustomerAcquisitionChart data={customerAcquisitionData} />
-              <MrrGrowthChart />
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Lead Funnel Analysis</h3>
+                <p className="text-sm text-slate-600">Visualizes the conversion journey from visitors to customers, showing the progression and drop-off at each stage of the sales funnel.</p>
+                <LeadFunnelChart data={leadFunnelData} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Revenue Attribution</h3>
+                <p className="text-sm text-slate-600">Breaks down revenue sources across different channels, helping identify the most profitable marketing channels and their contribution to overall revenue.</p>
+                <RevenueAttributionChart data={revenueAttributionData} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Customer Acquisition Trends</h3>
+                <p className="text-sm text-slate-600">Tracks Customer Acquisition Cost (CAC) and Lifetime Value (LTV) trends over time, showing the efficiency of marketing spend and customer value.</p>
+                <CustomerAcquisitionChart data={customerAcquisitionData} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">MRR Growth Analysis</h3>
+                <p className="text-sm text-slate-600">Monitors Monthly Recurring Revenue (MRR) growth patterns, highlighting trends and momentum in subscription revenue.</p>
+                <MrrGrowthChart />
+              </div>
             </div>
           </TabsContent>
 
           <TabsContent value="campaigns" className="space-y-4" role="tabpanel" id="campaigns-panel" aria-labelledby="campaigns-tab">
             <div className="grid grid-cols-1 gap-6">
-              <CampaignPerformanceChart data={campaignPerformanceData} />
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Campaign Performance Metrics</h3>
+                <p className="text-sm text-slate-600">Detailed analysis of marketing campaign performance, including impressions, clicks, conversions, and ROI across different channels.</p>
+                <CampaignPerformanceChart data={campaignPerformanceData} />
+              </div>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <RevenueAttributionChart data={revenueAttributionData} />
-                <CustomerAcquisitionChart data={customerAcquisitionData} />
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold">Revenue Channel Analysis</h3>
+                  <p className="text-sm text-slate-600">Distribution of revenue across different marketing channels, helping optimize channel mix and budget allocation.</p>
+                  <RevenueAttributionChart data={revenueAttributionData} />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-semibold">Customer Value Metrics</h3>
+                  <p className="text-sm text-slate-600">Monthly trends in customer acquisition costs and lifetime value, essential for measuring marketing efficiency.</p>
+                  <CustomerAcquisitionChart data={customerAcquisitionData} />
+                </div>
               </div>
             </div>
           </TabsContent>
 
           <TabsContent value="conversions" className="space-y-4" role="tabpanel" id="conversions-panel" aria-labelledby="conversions-tab">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <DemoConversionChart />
-              <LeadFunnelChart data={leadFunnelData} />
-              <MrrGrowthChart />
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Demo Conversion Analysis</h3>
+                <p className="text-sm text-slate-600">Tracks the effectiveness of demo requests and their conversion to qualified opportunities, measuring sales process efficiency.</p>
+                <DemoConversionChart />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Lead Flow Analysis</h3>
+                <p className="text-sm text-slate-600">Visual representation of lead progression through the sales funnel, identifying potential bottlenecks and optimization opportunities.</p>
+                <LeadFunnelChart data={leadFunnelData} />
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-lg font-semibold">Revenue Growth Tracking</h3>
+                <p className="text-sm text-slate-600">Monitors the growth trajectory of monthly recurring revenue, providing insights into business scalability and momentum.</p>
+                <MrrGrowthChart />
+              </div>
             </div>
           </TabsContent>
         </Tabs>
