@@ -12,6 +12,10 @@ A modern, interactive marketing analytics dashboard built with Next.js and Tailw
 - **Customer Analytics**: Customer acquisition cost (CAC) and lifetime value (LTV) analysis
 - **Responsive Design**: Optimized for all devices and screen sizes
 
+## Live Demo
+
+[View Live Dashboard](https://eaimarketingdashboard.netlify.app/)
+
 ## Dashboard Components
 
 ### Key Metrics
